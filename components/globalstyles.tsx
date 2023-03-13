@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     font-family: 'Neue Haas Grotesk Display Pro', sans-serif !important;
+    overflow-x: hidden;
   }
 
 `;

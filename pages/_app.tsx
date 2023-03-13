@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 
 const theme: DefaultTheme = {
   colors: {
-    primary: "#111",
+    primary: "#FFF",
     secondary: "#0070f3",
   },
 };
