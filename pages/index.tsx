@@ -1,7 +1,67 @@
 import Head from "next/head";
 import { Container, Main } from "../components/sharedstyles";
 
+import { BsStarFill } from 'react-icons/bs';
+
+// Import Swiper React components
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import head1 from '../public/assets/landing/head1.png';
+
+import {
+  FirstSection,
+  ContactDescription,
+  Vector,
+  LandingContainer,
+  ContactButton,
+  SecondSection,
+  SecondTittle,
+  OurServices,
+  OurTestimonials,
+  ServiceSlideContainer,
+  ThirdSection,
+  ThirdTitle,
+  ViewAllButton,
+} from "../styles/landing.style";
+
 export default function Home() {
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <Container>
       <Head>
@@ -13,7 +73,145 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <Main></Main>
+      <Main>
+        <FirstSection>
+          <LandingContainer>
+            <Vector></Vector>
+            <ContactDescription>
+              Our vision is to transform your dreams into a professional brand.<br />
+              Chimera provides state-of-the-art services.<br />
+              Let us enrich your business with new, high-tech opportunities
+            </ContactDescription>
+            <ContactButton>Contact Us</ContactButton>
+          </LandingContainer>
+        </FirstSection>
+
+        <SecondSection>
+          <LandingContainer>
+            <SecondTittle>WE OFFER</SecondTittle>
+            <OurServices>
+              <div className="service-top-title">Our Services</div>
+              <Slider
+                {...settings}
+              >
+                <div>
+                  <ServiceSlideContainer>
+                    <div className="service-image"></div>
+                    <div className="service-title">Machine Learning</div>
+                    <div className="service-body">is an essential component of modern software development and data science, and can help your organization stay ahead of the curve in terms of innovation and efficiency. <br />
+                      Contact us today to learn more about how our machine learning services can benefit your organization.</div>
+                  </ServiceSlideContainer>
+                </div>
+                <div>
+
+                  <ServiceSlideContainer>
+                    <div className="service-image"></div>
+                    <div className="service-title">Computer Vision</div>
+                    <div className="service-body">is an essential component of many modern applications, from retail and healthcare to manufacturing and logistics. <br />Our computer vision services can help you stay ahead of the curve in terms of innovation and efficiency, enabling you to achieve your business goals and objectives more effectively.</div>
+                  </ServiceSlideContainer>  </div>
+                <div>
+                  <ServiceSlideContainer>
+                    <div className="service-image"></div>
+                    <div className="service-title">Software Architectual Design</div>
+                    <div className="service-body"><b>Consistency, quality, and future-proof standards are essential in the software business.</b><br />
+                      Our team has many years of expertise in software architectural design.<br />
+                      Dreaming software is only a tiny part of the job.<br />
+                      If you want your software to run 24/7, to be optimized, get it standardized, you are in good hands.<br />
+                      Leave the tedious job for us if you wish to have rock-solid software!</div>
+                  </ServiceSlideContainer>  </div>
+                <div>
+                  <ServiceSlideContainer>
+                    <div className="service-image"></div>
+                    <div className="service-title">Consultancy&Optimization</div>
+                    <div className="service-body">
+                      The key to a successful project is good communication.<br />
+                      Managing jobs in a milestone/checkpoint system are all about consultations and optimization. With our clients, we are creating an iterative process whereby we slowly but surely can converge to the best possible solution to their problems.<br />
+
+                      <b>Tell us about your project.
+                        Let us help you enhance it to the max.</b></div>
+                  </ServiceSlideContainer>
+                </div>
+              </Slider>
+            </OurServices>
+            <OurTestimonials>
+              <div className="testimonial-title">Our Testimonials</div>
+              <div className="testimonial-body">Customer feedback is important to maximize performance.<br />
+                Fitting to your needs.</div>
+              <div className="testimonial-layout">
+                <div>
+                  <img src={head1.src} alt="test-head" />
+                  <div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</div>
+                    <div className="stars"><BsStarFill /><BsStarFill /><BsStarFill /><BsStarFill /><BsStarFill /></div>
+                  </div>
+                </div>
+                <div>
+                  <img src={head1.src} alt="test-head" />
+                  <div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</div>
+                    <div className="stars"><BsStarFill /><BsStarFill /><BsStarFill /><BsStarFill /><BsStarFill /></div>
+                  </div>
+                </div>
+                <div>
+                  <img src={head1.src} alt="test-head" />
+                  <div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</div>
+                    <div className="stars"><BsStarFill /><BsStarFill /><BsStarFill /><BsStarFill /><BsStarFill /></div>
+                  </div>
+                </div>
+              </div>
+            </OurTestimonials>
+          </LandingContainer>
+        </SecondSection>
+
+        <ThirdSection>
+          <LandingContainer>
+            <ThirdTitle>Our Latest Projects</ThirdTitle>
+            {/* <Slider
+              {...settings}
+            >
+              <div>
+                <ServiceSlideContainer>
+                  <div className="service-image"></div>
+                  <div className="service-title">Machine Learning</div>
+                  <div className="service-body">is an essential component of modern software development and data science, and can help your organization stay ahead of the curve in terms of innovation and efficiency. <br />
+                    Contact us today to learn more about how our machine learning services can benefit your organization.</div>
+                </ServiceSlideContainer>
+              </div>
+              <div>
+
+                <ServiceSlideContainer>
+                  <div className="service-image"></div>
+                  <div className="service-title">Computer Vision</div>
+                  <div className="service-body">is an essential component of many modern applications, from retail and healthcare to manufacturing and logistics. <br />Our computer vision services can help you stay ahead of the curve in terms of innovation and efficiency, enabling you to achieve your business goals and objectives more effectively.</div>
+                </ServiceSlideContainer>  </div>
+              <div>
+                <ServiceSlideContainer>
+                  <div className="service-image"></div>
+                  <div className="service-title">Software Architectual Design</div>
+                  <div className="service-body"><b>Consistency, quality, and future-proof standards are essential in the software business.</b><br />
+                    Our team has many years of expertise in software architectural design.<br />
+                    Dreaming software is only a tiny part of the job.<br />
+                    If you want your software to run 24/7, to be optimized, get it standardized, you are in good hands.<br />
+                    Leave the tedious job for us if you wish to have rock-solid software!</div>
+                </ServiceSlideContainer>  </div>
+              <div>
+                <ServiceSlideContainer>
+                  <div className="service-image"></div>
+                  <div className="service-title">Consultancy&Optimization</div>
+                  <div className="service-body">
+                    The key to a successful project is good communication.<br />
+                    Managing jobs in a milestone/checkpoint system are all about consultations and optimization. With our clients, we are creating an iterative process whereby we slowly but surely can converge to the best possible solution to their problems.<br />
+
+                    <b>Tell us about your project.
+                      Let us help you enhance it to the max.</b></div>
+                </ServiceSlideContainer>
+              </div>
+            </Slider> */}
+            <ViewAllButton>View All</ViewAllButton>
+          </LandingContainer>
+        </ThirdSection>
+      </Main>
     </Container>
   );
 }
