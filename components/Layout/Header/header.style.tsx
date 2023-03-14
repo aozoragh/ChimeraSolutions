@@ -39,6 +39,7 @@ export const HeaderTxt = styled.span`
   line-height: 60px;
   letter-spacing: 0em;
   text-align: center;
+  color: #000;
   cursor: pointer;
   text-decoration: none;
   :hover {

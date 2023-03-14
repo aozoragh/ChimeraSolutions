@@ -1,15 +1,26 @@
 import Head from "next/head";
 import { Container, Main } from "../components/sharedstyles";
 
-import { BsStarFill } from 'react-icons/bs';
+import { BsStarFill, BsDiscord, BsTwitter, BsYoutube, BsInstagram, BsLinkedin } from 'react-icons/bs';
 
 // Import Swiper React components
 import Slider from "react-slick";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import head1 from '../public/assets/landing/head1.png';
+import member1 from '../public/assets/landing/mem1.png';
+import member2 from '../public/assets/landing/mem2.png';
+import member3 from '../public/assets/landing/mem3.png';
+import media1 from '../public/assets/landing/media1.png';
+import media2 from '../public/assets/landing/media2.png';
+import media3 from '../public/assets/landing/media3.png';
 
 import {
   FirstSection,
@@ -25,6 +36,20 @@ import {
   ThirdSection,
   ThirdTitle,
   ViewAllButton,
+  Mask,
+  FourthSection,
+  ProductsText,
+  FifthSection,
+  AvatarGallery,
+  MediaGallery,
+  ViewMoreButton,
+  OurTeamTitle,
+  OurTeamDesc,
+  MediaTitle,
+  MediaDesc,
+  SixthSection,
+  Mark,
+  ContactArea
 } from "../styles/landing.style";
 
 export default function Home() {
@@ -39,16 +64,16 @@ export default function Home() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 3,
           infinite: true,
           dots: true
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 2,
           initialSlide: 2
         }
@@ -165,52 +190,89 @@ export default function Home() {
         </SecondSection>
 
         <ThirdSection>
-          <LandingContainer>
-            <ThirdTitle>Our Latest Projects</ThirdTitle>
-            {/* <Slider
-              {...settings}
+          <Mask>
+            <LandingContainer>
+              <ThirdTitle>Our Latest Projects</ThirdTitle>
+              {/* <Swiper
+              spaceBetween={50}
+              slidesPerView={3}
+              onSlideChange={() => console.log('slide change')}
+              onSwiper={(swiper) => console.log(swiper)}
             >
-              <div>
-                <ServiceSlideContainer>
-                  <div className="service-image"></div>
-                  <div className="service-title">Machine Learning</div>
-                  <div className="service-body">is an essential component of modern software development and data science, and can help your organization stay ahead of the curve in terms of innovation and efficiency. <br />
-                    Contact us today to learn more about how our machine learning services can benefit your organization.</div>
-                </ServiceSlideContainer>
-              </div>
-              <div>
+              <SwiperSlide>Slide 1</SwiperSlide>
+              <SwiperSlide>Slide 2</SwiperSlide>
+              <SwiperSlide>Slide 3</SwiperSlide>
+              ...
+            </Swiper> */}
+              <ViewAllButton>View All</ViewAllButton>
+            </LandingContainer>
+          </Mask>
+        </ThirdSection>
 
-                <ServiceSlideContainer>
-                  <div className="service-image"></div>
-                  <div className="service-title">Computer Vision</div>
-                  <div className="service-body">is an essential component of many modern applications, from retail and healthcare to manufacturing and logistics. <br />Our computer vision services can help you stay ahead of the curve in terms of innovation and efficiency, enabling you to achieve your business goals and objectives more effectively.</div>
-                </ServiceSlideContainer>  </div>
-              <div>
-                <ServiceSlideContainer>
-                  <div className="service-image"></div>
-                  <div className="service-title">Software Architectual Design</div>
-                  <div className="service-body"><b>Consistency, quality, and future-proof standards are essential in the software business.</b><br />
-                    Our team has many years of expertise in software architectural design.<br />
-                    Dreaming software is only a tiny part of the job.<br />
-                    If you want your software to run 24/7, to be optimized, get it standardized, you are in good hands.<br />
-                    Leave the tedious job for us if you wish to have rock-solid software!</div>
-                </ServiceSlideContainer>  </div>
-              <div>
-                <ServiceSlideContainer>
-                  <div className="service-image"></div>
-                  <div className="service-title">Consultancy&Optimization</div>
-                  <div className="service-body">
-                    The key to a successful project is good communication.<br />
-                    Managing jobs in a milestone/checkpoint system are all about consultations and optimization. With our clients, we are creating an iterative process whereby we slowly but surely can converge to the best possible solution to their problems.<br />
-
-                    <b>Tell us about your project.
-                      Let us help you enhance it to the max.</b></div>
-                </ServiceSlideContainer>
-              </div>
-            </Slider> */}
+        <FourthSection>
+          <LandingContainer>
+            <div></div>
+            <ProductsText>Products</ProductsText>
             <ViewAllButton>View All</ViewAllButton>
           </LandingContainer>
-        </ThirdSection>
+        </FourthSection>
+
+        <FifthSection>
+          <LandingContainer>
+            <OurTeamTitle>Our Team</OurTeamTitle>
+            <OurTeamDesc>Highly motivated to produce high-quality products, solve real-life problems, and use state-of-the-art technology. We believe in good communication and precise planning to deliver the most convenient services and solutions to our customers. We are looking forward to working with you!</OurTeamDesc>
+            <AvatarGallery>
+              <div>
+                <img src={member1.src} alt="member1" />
+                <div className="team-members-name">Demeter Márton</div>
+                <div className="team-members-job">CEO</div>
+              </div>
+              <div>
+                <img src={member2.src} alt="member1" />
+                <div className="team-members-name">Török Gábor</div>
+                <div className="team-members-job">CTO</div>
+              </div>
+              <div>
+                <img src={member3.src} alt="member1" />
+                <div className="team-members-name">Németh Barnabás</div>
+                <div className="team-members-job">Social Media Manager</div>
+              </div>
+            </AvatarGallery>
+            <ViewMoreButton>View More</ViewMoreButton>
+            <MediaTitle>Social Media</MediaTitle>
+            <MediaDesc>We think communication is key, thus we share our thoughts and projects to the world consistently.</MediaDesc>
+            <MediaGallery>
+              <div>
+                <img src={media1.src} alt="media1" />
+              </div>
+              <div>
+                <img src={media2.src} alt="media1" />
+              </div>
+              <div>
+                <img src={media3.src} alt="media1" />
+              </div>
+            </MediaGallery>
+          </LandingContainer>
+        </FifthSection>
+
+        <SixthSection>
+          <LandingContainer>
+            <Mark></Mark>
+            <ContactArea>
+              <span>About</span>
+              <span>Team</span>
+              <span>Contacts</span>
+              <span>Products</span>
+              <div>
+                <BsDiscord />
+                <BsYoutube />
+                <BsLinkedin />
+                <BsTwitter />
+                <BsInstagram />
+              </div>
+            </ContactArea>
+          </LandingContainer>
+        </SixthSection>
       </Main>
     </Container>
   );
