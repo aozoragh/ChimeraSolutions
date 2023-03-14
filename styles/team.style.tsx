@@ -16,6 +16,7 @@ export const TeamHeadTxt = styled.span`
   font-weight: bold;
   letter-spacing: 0em;
   text-align: center;
+  color: #000;
 
   @media screen and (max-width: 1024px) {
     font-size: 200px;
@@ -38,6 +39,7 @@ export const LinkTxt = styled.a`
   font-weight: bold;
   line-height: 119px;
   letter-spacing: 0em;
+  color: #000;
   text-align: left;
   cursor: pointer;
   @media screen and (max-width: 1440px) {
@@ -61,6 +63,7 @@ export const SkillTxt = styled.span`
   font-weight: bold;
   line-height: 100px;
   letter-spacing: 0em;
+  color: #000;
   text-align: left;
   @media screen and (max-width: 1440px) {
     font-size: 50px;
@@ -89,6 +92,7 @@ export const OurText = styled.span`
   font-weight: 350;
   letter-spacing: 0em;
   text-align: left;
+  color: #000;
 
   @media screen and (max-width: 425px) {
     font-size: 14px;
@@ -101,6 +105,7 @@ export const OurTDescribe = styled.span`
   letter-spacing: 0em;
   text-align: left;
   line-height: 50px;
+  color: #000;
   @media screen and (max-width: 768px) {
     font-size: 36px;
   }
@@ -151,6 +156,7 @@ export const LanguageTxt = styled.span`
   font-weight: bold;
   letter-spacing: 0em;
   text-align: left;
+  color: #000;
   @media screen and (max-width: 768px) {
     font-size: 36px;
   }
