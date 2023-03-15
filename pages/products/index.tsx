@@ -199,7 +199,7 @@ export default function Team() {
           <ContactArea>
             <input type="text" placeholder="Name" />
             <input type="text" placeholder="Email" />
-            <textarea name="" id="" cols={30} rows={15} placeholder="Text"></textarea>
+            <textarea name="" id="textarea" cols={30} rows={15} placeholder="Text"></textarea>
             <button>Message</button>
           </ContactArea>
         </Container>
