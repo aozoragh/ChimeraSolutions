@@ -30,7 +30,19 @@ import {
   FirstText,
   SecondText,
   ThirdSection,
-  Container
+  Container,
+  LineBottomNew,
+  FifthSection,
+  ThirdBackgroundArea,
+  OurPartnersText,
+  WhoText,
+  SubContainer,
+  PartnerGallery,
+  AskUsArea,
+  AskUsText,
+  AskUsDesc,
+  ContactDesc,
+  ContactArea
 } from "../../styles/product.style";
 import Image from "next/image";
 export default function Team() {
@@ -132,9 +144,66 @@ export default function Team() {
       <ThirdSection>
         <Container>
           <FirstText>PASS can be paired with an entry surveillance system</FirstText>
+          <LineBottomNew>HOW IT WORKS</LineBottomNew>
           <SecondText>As an extra layer of security, an entry point monitoring system can be implemented on sites, which requires only fixed and well-positioned IP cameras. Knowing the timestamp of the entry and who entered via the applied entrance card, paired with the detections, our computer vision algorithm can efficiently filter out workers who try to enter the site with insufficient PPE.</SecondText>
+
+          <VideoArea>
+            <img src={"/assets/products/tv.png"} alt="" draggable={false} />
+            <VideoWrapper>
+              <h1>PASS</h1>
+              <PlayButton>
+                <img src="/assets/products/play.png" alt="" />
+              </PlayButton>
+            </VideoWrapper>
+            <Video>
+              <video src="" poster="/assets/products/poster2.png" className="video" />
+            </Video>
+          </VideoArea>
         </Container>
       </ThirdSection>
+      <ThirdBackgroundArea>
+        <img src="/assets/landing/background2.png" alt="" />
+      </ThirdBackgroundArea>
+      <ThirdSection>
+        <Container>
+          <OurPartnersText>Our Partners</OurPartnersText>
+          <span>TESTED AT</span>
+          <SubContainer>
+            <WhoText>
+              <p>Who</p>
+              <p>We</p>
+              <p>Work</p>
+              <p>With</p>
+            </WhoText>
+            <PartnerGallery>
+              <img src="/assets/products/partner1.png" alt="" />
+              <img src="/assets/products/partner2.png" alt="" />
+            </PartnerGallery>
+          </SubContainer>
+        </Container>
+      </ThirdSection>
+      <FifthSection>
+        <Container>
+          <LineTop></LineTop>
+          <AskUsArea>
+            <AskUsText>ASK US</AskUsText>
+            <AskUsDesc>
+              <p>Interested?</p>
+              <p>Request Consultation</p>
+            </AskUsDesc>
+          </AskUsArea>
+          <AskUsArea>
+            <AskUsText>CONTACT</AskUsText>
+            <ContactDesc>info@chimerasolutions.ai</ContactDesc>
+          </AskUsArea>
+          <ContactArea>
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Email" />
+            <textarea name="" id="" cols={30} rows={15} placeholder="Text"></textarea>
+            <button>Message</button>
+          </ContactArea>
+        </Container>
+      </FifthSection>
     </TeamContainer>
   );
 }
