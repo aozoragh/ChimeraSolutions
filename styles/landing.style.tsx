@@ -11,13 +11,18 @@ import mark from '../public/assets/landing/mark.png'
 
 export const FirstSection = styled.div`
   background: url(${bg1.src});
-  background-size: 100% 100%;
+  background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 1300px;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  @media screen and (max-width: 1024px) {
+    height: 1100px;
+  }
+  @media screen and (max-width: 425px) {
+    height: 1000px;
+  }
 `;
 
 export const LandingContainer = styled.div`
@@ -36,32 +41,49 @@ export const ContactDescription = styled.div`
   font-size: 50px;
   line-height: 57px;
   color: #FFFFFF;
-  margin-top: 100px;
+  /* margin-top: 100px; */
+  @media screen and (max-width: 1024px) {
+    font-size:40px;
+    line-height: 47px;
+    /* margin-top: 50px; */
+  }
+  @media screen and (max-width: 768px) {
+    font-size:40px;
+    line-height: 47px;
+    /* margin-top: 50px; */
+  }
   @media screen and (max-width: 425px) {
     font-size: 30px;
     line-height: 37px;
-  margin-top: 50px;
+    /* margin-top: 50px; */
   }
 `;
 export const Vector = styled.div`
   width: 100%;
-  height: 50%;
-  background: url(${vector1.src});
+  height: 474px;
+  /* border: 1px solid red; */
+  background: url(${vector1.src}) no-repeat;
   background-size: 100% 100%;
+  
+  @media screen and (max-width: 1024px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 300px;
+  }
   @media screen and (max-width: 425px) {
-    height: 25%;
+    height: 150px;
   }
 `;
 export const ContactButton = styled.div`
   width: 322px;
-  height: 100px;
+  height: 111px;
   border: 1px solid #9A6C03;
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
-  line-height: 60px;
   color: #fff;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   
   display: flex;
   justify-content: center;
@@ -70,7 +92,7 @@ export const ContactButton = styled.div`
     width: 100%;
   }
   @media screen and (max-width: 320px) {
-    font-size: 45px;
+    font-size: 33px;
   }
 `;
 export const SecondSection = styled.div`
@@ -151,10 +173,16 @@ export const OurServices = styled.div`
 export const ServiceSlideContainer = styled.div`
   background-color: #0F0F13;
   padding: 30px;
+    @media screen and (max-width: 425px) {
+      padding: 15px;
+    }
   
   border-radius: 10px;
   margin: 0 15px;
   margin-top: 50px;
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
   
   div.service-image {
     background: url(${serviceImg.src});
@@ -168,6 +196,7 @@ export const ServiceSlideContainer = styled.div`
     font-size: 36px;
     line-height: 43px;
     margin-top: 30px;
+    word-wrap: break-word;
   }
   div.service-body {
     font-style: normal;
@@ -262,7 +291,7 @@ export const OurTestimonials = styled.div`
 `;
 export const ThirdSection = styled.div`
   background: url(${bg2.src});
-  background-size: 100% 100%;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   .swiper-slide {
@@ -320,7 +349,7 @@ export const ViewAllButton = styled.div`
 
 export const FourthSection = styled.div`
   background: url(${bg3.src});
-  background-size: 100% 100%;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -337,6 +366,9 @@ export const ProductsText = styled.div`
   font-weight: 500;
   font-size: 400px;
   line-height: 477px;
+    @media screen and (max-width: 1440px) {
+      font-size: 300px;
+    }
     @media screen and (max-width: 1024px) {
       font-size: 200px;
     }
@@ -385,6 +417,7 @@ export const AvatarGallery = styled.div`
         height: 450px;
       }
     img {
+      object-fit: cover;
       width: 100%;
       height: 300px;
     }
@@ -393,6 +426,7 @@ export const AvatarGallery = styled.div`
       font-style: normal;
       font-weight: 350;
       font-size: 35px;
+      text-align: center;
       @media screen and (max-width: 1024px) {
         font-size: 30px;
       }
@@ -408,6 +442,11 @@ export const MediaGallery = styled.div`
   align-items: center;
   width: 100%;
   margin-top: 80px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
       @media screen and (max-width: 768px) {
         flex-direction: column;
       }
@@ -431,13 +470,31 @@ export const OurTeamTitle = styled.div`
   font-weight: 500;
   font-size: 64px;
   line-height: 76px;
+  @media screen and (max-width: 320px) {
+    font-size: 60px;
+  }
 `;
 export const OurTeamDesc = styled.div`
+  width: 100%;
   font-style: normal;
   font-weight: 450;
   font-size: 50px;
   line-height: 57px;
   margin-top: 50px;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  line-height: 50px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 30px;
+  line-height: 40px;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 20px;
+  line-height: 30px;
+  }
 `;
 export const MediaTitle = styled.div`
   font-style: normal;
@@ -469,7 +526,7 @@ export const MediaDesc = styled.div`
 
 export const SixthSection = styled.div`
   background: url(${bg1.src});
-  background-size: 100% 100%;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   display: flex;
