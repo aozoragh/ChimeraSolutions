@@ -280,7 +280,10 @@ export const LineBottomNew = styled.div`
 `;
 
 export const ThirdBackgroundArea = styled.div`
+  border: 1px solid red;
+  margin-bottom: -5px;
   img {
+    border: 1px solid green;
     width: 100%;
     height: 100%;
     object-fit: cover;
