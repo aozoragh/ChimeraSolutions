@@ -42,7 +42,8 @@ import {
   AskUsText,
   AskUsDesc,
   ContactDesc,
-  ContactArea
+  ContactArea,
+  ThirdSection2
 } from "../../styles/product.style";
 import Image from "next/image";
 export default function Team() {
@@ -150,10 +151,9 @@ export default function Team() {
           <VideoArea>
             <img src={"/assets/products/tv.png"} alt="" draggable={false} />
             <VideoWrapper>
-              <h1>PASS</h1>
-              <PlayButton>
+              {/* <PlayButton>
                 <img src="/assets/products/play.png" alt="" />
-              </PlayButton>
+              </PlayButton> */}
             </VideoWrapper>
             <Video>
               <video src="" poster="/assets/products/poster2.png" className="video" />
@@ -164,7 +164,7 @@ export default function Team() {
       <ThirdBackgroundArea>
         <img src="/assets/landing/background2.png" alt="" />
       </ThirdBackgroundArea>
-      <ThirdSection>
+      <ThirdSection2>
         <Container>
           <OurPartnersText>Our Partners</OurPartnersText>
           <span>TESTED AT</span>
@@ -181,7 +181,7 @@ export default function Team() {
             </PartnerGallery>
           </SubContainer>
         </Container>
-      </ThirdSection>
+      </ThirdSection2>
       <FifthSection>
         <Container>
           <LineTop></LineTop>

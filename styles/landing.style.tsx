@@ -31,24 +31,31 @@ export const LandingContainer = styled.div`
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
 `;
 
 export const ContactDescription = styled.div`
+  font-family: "NHaasGroteskDSPro-55Rg";
   font-style: normal;
   font-weight: 450;
-  font-size: 50px;
+  font-size: 55px;
   line-height: 57px;
+  word-break: break-all;
   color: #FFFFFF;
   /* margin-top: 100px; */
+  @media screen and (max-width: 1440px) {
+    font-size:43px;
+    line-height: 47px;
+    /* margin-top: 50px; */
+  }
   @media screen and (max-width: 1024px) {
     font-size:40px;
     line-height: 47px;
     /* margin-top: 50px; */
   }
   @media screen and (max-width: 768px) {
-    font-size:40px;
+    font-size:34px;
     line-height: 47px;
     /* margin-top: 50px; */
   }
@@ -57,22 +64,39 @@ export const ContactDescription = styled.div`
     line-height: 37px;
     /* margin-top: 50px; */
   }
+  @media screen and (max-width: 320px) {
+    font-size: 27px;
+    line-height: 37px;
+    /* margin-top: 50px; */
+  }
 `;
 export const Vector = styled.div`
-  width: 100%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   height: 474px;
   /* border: 1px solid red; */
   background: url(${vector1.src}) no-repeat;
   background-size: 100% 100%;
   
+  @media screen and (max-width: 1440px) {
+    height: 330px;
+  }
   @media screen and (max-width: 1024px) {
-    height: 400px;
+    height: 250px;
   }
   @media screen and (max-width: 768px) {
-    height: 300px;
+    height: 200px;
   }
   @media screen and (max-width: 425px) {
+    width: 100%;
     height: 150px;
+  }
+  @media screen and (max-width: 375px) {
+    height: 120px;
+  }
+  @media screen and (max-width: 320px) {
+    height: 100px;
   }
 `;
 export const ContactButton = styled.div`
@@ -110,6 +134,7 @@ export const SecondSection = styled.div`
   }
 `;
 export const SecondTittle = styled.div`
+font-family: "NHaasGroteskDSPro-65Md";
   font-weight: 500;
   font-size: 300px;
   line-height: 358px;
@@ -139,6 +164,7 @@ export const OurServices = styled.div`
   width: 100%;
   margin-top: 127px;
   div.service-top-title {
+    font-family: "NHaasGroteskDSPro-65Md";
     font-style: normal;
     font-weight: 500;
     font-size: 64px;
@@ -191,6 +217,7 @@ export const ServiceSlideContainer = styled.div`
     height: 120px;
   }
   div.service-title {
+    font-family: "NHaasGroteskDSPro-65Md";
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
@@ -199,6 +226,7 @@ export const ServiceSlideContainer = styled.div`
     word-wrap: break-word;
   }
   div.service-body {
+    font-family: "NHaasGroteskDSPro-35XLt";
     font-style: normal;
     font-weight: 350;
     font-size: 24px;
@@ -209,6 +237,7 @@ export const ServiceSlideContainer = styled.div`
 export const OurTestimonials = styled.div`
 
   div.testimonial-title {
+    font-family: "NHaasGroteskDSPro-65Md";
     font-style: normal;
     font-weight: 500;
     font-size: 64px;
@@ -224,12 +253,14 @@ export const OurTestimonials = styled.div`
     }
   }
   div.testimonial-body {
+    font-family: "NHaasGroteskDSPro-55Rg";
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 48px;
     @media screen and (max-width: 425px) {
       font-size: 30px;
+      line-height: 40px;
     }
     @media screen and (max-width: 375px) {
       font-size: 28px;
@@ -259,6 +290,7 @@ export const OurTestimonials = styled.div`
       height: 50px;
     }
     & > div {
+      font-family: "NHaasGroteskDSPro-35XLt";
       width: 80%;
       font-style: normal;
       font-weight: 400;
@@ -280,6 +312,7 @@ export const OurTestimonials = styled.div`
       padding: 10px;
     }
     @media screen and (max-width: 375px) {
+      flex-direction: column;
       padding: 5px;      
       /* width: 95%; */
     }
@@ -306,6 +339,7 @@ export const ThirdSection = styled.div`
     }
 `;
 export const ThirdTitle = styled.div`
+  font-family: "NHaasGroteskDSPro-65Md";
   font-style: normal;
   font-weight: 500;
   font-size: 64px;
@@ -360,6 +394,9 @@ export const FourthSection = styled.div`
     justify-content: space-between;
     align-items: center;
   }
+    @media screen and (max-width: 425px) {
+      height: 75vh;
+    }
 `;
 export const ProductsText = styled.div`
   font-style: normal;
@@ -412,7 +449,7 @@ export const AvatarGallery = styled.div`
         width: 30%;
       }
       @media screen and (max-width: 768px) {
-        width: 80%;
+        width: 50%;
         margin-top: 20px;
         height: 450px;
       }
@@ -434,6 +471,9 @@ export const AvatarGallery = styled.div`
     & > div:last-of-type {
       margin-top: 15px;
     }
+  }
+  div.team-members-job {
+    font-family: "NHaasGroteskDSPro-35XLt";
   }
 `;
 export const MediaGallery = styled.div`  
@@ -475,6 +515,7 @@ export const OurTeamTitle = styled.div`
   }
 `;
 export const OurTeamDesc = styled.div`
+  font-family: "NHaasGroteskDSPro-35XLt";
   width: 100%;
   font-style: normal;
   font-weight: 450;
@@ -510,11 +551,15 @@ export const MediaTitle = styled.div`
       }
 `;
 export const MediaDesc = styled.div`
+  font-family: "NHaasGroteskDSPro-35XLt";
   font-style: normal;
   font-weight: 450;
   font-size: 50px;
   line-height: 57px;
   margin-top: 50px;
+      @media screen and (max-width: 768px) {
+        font-size: 45px;
+      }
       @media screen and (max-width: 425px) {
         font-size: 35px;
       }
