@@ -17,7 +17,6 @@ export const AboutHeadView = styled.div``;
 export const AboutHeadTxt = styled.span`
   font-size: 320px;
   font-weight: bold;
-  line-height: 500px;
   letter-spacing: 0em;
   text-align: center;
   color: #ffffff;
