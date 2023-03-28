@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-
 export const ProjectContainer = styled.div`
   width: 100%;
-  background-color: #E9E9E9;
+  background-color: #e9e9e9;
 `;
 export const VisionSection = styled.div`
   background: url("/assets/projects/vision1.png") no-repeat;
@@ -13,7 +12,7 @@ export const VisionSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   @media screen and (max-width: 425px) {
     height: 60vh;
   }
@@ -123,7 +122,7 @@ export const ThirdSectionContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
     div {
@@ -137,22 +136,19 @@ export const ThirdSectionContent = styled.div`
       line-height: 30px;
     }
   }
-  `;
+`;
 export const Vision3Section = styled.div`
-    background: url("/assets/projects/image 60.png") no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 130vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: url("/assets/projects/image 60.png") no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 130vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media screen and (max-width: 768px) {
     height: 80vh;
   }
   @media screen and (max-width: 425px) {
     height: 60vh;
   }
-  `;
-export const gfgsfsdfsdfsdf = styled.div`
-
 `;

@@ -43,9 +43,9 @@ import {
   AskUsDesc,
   ContactDesc,
   ContactArea,
-  ThirdSection2
 } from "../../styles/product.style";
 import Image from "next/image";
+import ContactSection from "../../components/ContactSection";
 export default function Team() {
   return (
     <TeamContainer>
@@ -113,18 +113,19 @@ export default function Team() {
             </SubPassView>
           </PassViewContainer>
         </PassViewNext>
-        <SliderArea>
-
-        </SliderArea>
+        <SliderArea></SliderArea>
         <PPETextArea>
-          To minimize on-site injuries and accidents we developed a real-time portable solution for PPE surveillance.
+          To minimize on-site injuries and accidents we developed a real-time
+          portable solution for PPE surveillance.
         </PPETextArea>
-        <LineBottom>
-          HOW IT WORKS
-        </LineBottom>
+        <LineBottom>HOW IT WORKS</LineBottom>
         <PTZTextArea>
-          Our application runs on the cloud, processing the data recorded on-site with PTZ cameras. The cameras can be applied with presets suitable for the given construction site, which will record a scene for a time range specified by the user.
-          The detected workers who are not wearing proper PPE will be recorded in a database, which the users can interact with via an easy-to-use website.
+          Our application runs on the cloud, processing the data recorded
+          on-site with PTZ cameras. The cameras can be applied with presets
+          suitable for the given construction site, which will record a scene
+          for a time range specified by the user. The detected workers who are
+          not wearing proper PPE will be recorded in a database, which the users
+          can interact with via an easy-to-use website.
         </PTZTextArea>
         <VideoArea>
           <img src={"/assets/products/tv.png"} alt="" draggable={false} />
@@ -135,7 +136,11 @@ export default function Team() {
             </PlayButton>
           </VideoWrapper>
           <Video>
-            <video src="" poster="/assets/products/background.png" className="video" />
+            <video
+              src=""
+              poster="/assets/products/background.png"
+              className="video"
+            />
           </Video>
         </VideoArea>
       </PassContext>
@@ -144,19 +149,33 @@ export default function Team() {
       </SecondBackgroundArea>
       <ThirdSection>
         <Container>
-          <FirstText>PASS can be paired with an entry surveillance system</FirstText>
+          <FirstText>
+            PASS can be paired with an entry surveillance system
+          </FirstText>
           <LineBottomNew>HOW IT WORKS</LineBottomNew>
-          <SecondText>As an extra layer of security, an entry point monitoring system can be implemented on sites, which requires only fixed and well-positioned IP cameras. Knowing the timestamp of the entry and who entered via the applied entrance card, paired with the detections, our computer vision algorithm can efficiently filter out workers who try to enter the site with insufficient PPE.</SecondText>
+          <SecondText>
+            As an extra layer of security, an entry point monitoring system can
+            be implemented on sites, which requires only fixed and
+            well-positioned IP cameras. Knowing the timestamp of the entry and
+            who entered via the applied entrance card, paired with the
+            detections, our computer vision algorithm can efficiently filter out
+            workers who try to enter the site with insufficient PPE.
+          </SecondText>
 
           <VideoArea>
             <img src={"/assets/products/tv.png"} alt="" draggable={false} />
             <VideoWrapper>
-              {/* <PlayButton>
+              <h1>PASS</h1>
+              <PlayButton>
                 <img src="/assets/products/play.png" alt="" />
-              </PlayButton> */}
+              </PlayButton>
             </VideoWrapper>
             <Video>
-              <video src="" poster="/assets/products/poster2.png" className="video" />
+              <video
+                src=""
+                poster="/assets/products/poster2.png"
+                className="video"
+              />
             </Video>
           </VideoArea>
         </Container>
@@ -164,7 +183,7 @@ export default function Team() {
       <ThirdBackgroundArea>
         <img src="/assets/landing/background2.png" alt="" />
       </ThirdBackgroundArea>
-      <ThirdSection2>
+      <ThirdSection>
         <Container>
           <OurPartnersText>Our Partners</OurPartnersText>
           <span>TESTED AT</span>
@@ -181,7 +200,7 @@ export default function Team() {
             </PartnerGallery>
           </SubContainer>
         </Container>
-      </ThirdSection2>
+      </ThirdSection>
       <FifthSection>
         <Container>
           <LineTop></LineTop>
@@ -196,12 +215,7 @@ export default function Team() {
             <AskUsText>CONTACT</AskUsText>
             <ContactDesc>info@chimerasolutions.ai</ContactDesc>
           </AskUsArea>
-          <ContactArea>
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Email" />
-            <textarea name="" id="textarea" cols={30} rows={15} placeholder="Text"></textarea>
-            <button>Message</button>
-          </ContactArea>
+          <ContactSection />
         </Container>
       </FifthSection>
     </TeamContainer>

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import bg1 from "../public/assets/products/background.png";
 import tv from "../public/assets/products/tv.png";
+import play from "../public/assets/products/play.png";
+import vision from "../public/assets/products/vision.png";
 
 export const TeamContainer = styled.div`
   background-color: #e9e9e9;
@@ -8,7 +10,7 @@ export const TeamContainer = styled.div`
   min-height: calc(100vh - 84px);
 `;
 export const TeamContext = styled.div`
-  max-width: 90%;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px 40px 20px;
 `;
@@ -92,8 +94,8 @@ export const PassContainer = styled.div`
 export const PassTxt = styled.div`
   font-size: 280px;
   font-weight: bold;
-  -webkit-text-stroke: 1px #fff;
-  color: transparent;
+
+  color: #fff;
   @media screen and (max-width: 1280px) {
     font-size: 180px;
   }
@@ -126,9 +128,6 @@ export const PassViewNext = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
 `;
 export const SubPassView = styled.div`
   display: flex;
@@ -142,9 +141,6 @@ export const PassSmallTxt = styled.span`
   color: #fff;
   opacity: 0.75;
   margin-top: 30px;
-  @media screen and (max-width: 425px) {
-    font-size: 30px;
-  }
 `;
 
 export const EmailsContainer = styled.div`
@@ -178,22 +174,8 @@ export const PPETextArea = styled.div`
   font-size: 80px;
   line-height: 76px;
   padding: 100px 10px;
-  @media screen and (max-width: 1024px) {
-    font-size: 70px;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 55px;
-  }
-  @media screen and (max-width: 425px) {
-    font-size: 35px;
-    line-height: 50px;
-  }
-  @media screen and (max-width: 320px) {
-    font-size: 33px;
-    line-height: 45px;
-  }
 `;
-export const LineBottom = styled.div`  
+export const LineBottom = styled.div`
   border-bottom: 1px solid #fff;
   width: 90%;
   margin: auto;
@@ -207,13 +189,8 @@ export const PTZTextArea = styled.div`
   font-size: 45px;
   line-height: 46px;
   padding: 20px 0 0 0;
-  @media screen and (max-width: 425px) {
-    font-size: 33px;
-    line-height: 40px;
-  }
 `;
 export const VideoArea = styled.div`
-
   width: 80%;
   margin: 300px auto auto auto;
   padding-bottom: 300px;
@@ -226,86 +203,44 @@ export const VideoArea = styled.div`
     width: 100%;
     height: 100%;
   }
-  
-    @media screen and (max-width: 1024px) {
-      margin: 200px auto auto auto;
-    }
-    @media screen and (max-width: 768px) {
-      margin: 150px auto auto auto;
-    }
-    @media screen and (max-width: 425px) {
-      margin: 100px auto auto auto;
-    }
 
   /* background: url(${tv.src}) no-repeat;
   background-size: cover; */
 `;
 export const PlayButton = styled.div`
-width: 100%;
+  width: 100%;
   img {
     width: 100%;
-    
-    @media screen and (max-width: 1024px) {
-      width: 70%;
-      margin-bottom: 30px;
-    }
-    @media screen and (max-width: 768px) {
-      width: 50%;
-      margin-top: -40px;
-    }
-    @media screen and (max-width: 425px) {
-      width: 25%;
-      margin-top: -50px;
-    }
-    @media screen and (max-width: 320px) {
-      width: 25%;
-      margin-top: -70px;
-    }
   }
 `;
 
 export const Video = styled.div`
-
-position: absolute;
+  position: absolute;
   width: 100%;
   height: calc(100% - 300px);
   top: 0;
   left: 0;
-     padding: 2.8% 12% 6.5%;
+  padding: 2.8% 12% 6.5%;
   video {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-`
+`;
 
 export const VideoWrapper = styled.div`
   position: absolute;
   z-index: 1;
-  text-align: center;
   h1 {
+    font-family: "Neue Haas Grotesk Display Pro";
     font-style: normal;
     font-weight: 500;
     font-size: 150px;
     line-height: 179px;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
     margin: 0;
     margin-bottom: 20px;
-    
-    @media screen and (max-width: 1024px) {
-      font-size: 130px;
-      margin-bottom: 0px;
-    }
-    @media screen and (max-width: 768px) {
-      font-size: 90px;
-    }
-    @media screen and (max-width: 425px) {
-      font-size: 60px;
-      margin-top: -50px;
-    }
   }
-`
+`;
 
 export const SecondBackgroundArea = styled.div`
   img {
@@ -319,23 +254,9 @@ export const ThirdSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(146.33deg, #839CAF -8.18%, #193245 97.91%);
-  background-blend-mode: darken;
-  padding: 25vh 0 0 0;
-  margin-top: -10px;
-`;
-export const ThirdSection2 = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(146.33deg, #839CAF -8.18%, #193245 97.91%);
+  background: linear-gradient(146.33deg, #839caf -8.18%, #193245 97.91%);
   background-blend-mode: darken;
   padding: 25vh 0;
-  margin-top: -10px;
-    @media screen and (max-width: 425px) {
-      padding: 10vh 0;
-    }
 `;
 export const Container = styled.div`
   width: 90%;
@@ -344,30 +265,12 @@ export const FirstText = styled.div`
   font-weight: 500;
   font-size: 80px;
   line-height: 76px;
-  
-    @media screen and (max-width: 1024px) {
-      font-size: 70px;
-    }
-    @media screen and (max-width: 425px) {
-      font-size:60px;
-      line-height: 60px;
-    }
-    @media screen and (max-width: 375px) {
-      font-size:48px;
-      line-height: 55px;
-    }
 `;
 export const SecondText = styled.div`
   font-weight: 500;
   font-size: 45px;
-    @media screen and (max-width: 768px) {
-      font-size: 40px;
-    }
-    @media screen and (max-width: 425px) {
-      font-size: 35px;
-    }
 `;
-export const LineBottomNew = styled.div` 
+export const LineBottomNew = styled.div`
   border-bottom: 1px solid #fff;
   padding: 30px 5px 10px 0;
   opacity: 0.75;
@@ -385,33 +288,18 @@ export const ThirdBackgroundArea = styled.div`
 export const OurPartnersText = styled.div`
   font-weight: 500;
   font-size: 150px;
-    @media screen and (max-width: 768px) {
-      font-size: 120px;
-    }
-    @media screen and (max-width: 425px) {
-      font-size: 60px;
-    }
-    @media screen and (max-width: 320px) {
-      font-size: 50px;
-    }
 `;
-export const WhoText = styled.div` 
+export const WhoText = styled.div`
   border-top: 1px solid #fff;
   font-weight: 500;
   font-size: 80px;
   width: 45%;
-    @media screen and (max-width: 768px) {
-      font-size: 60px;
-    }
-    @media screen and (max-width: 425px) {
-      font-size: 35px;
-    }
   p {
     margin: 0 !important;
   }
 `;
 export const SubContainer = styled.div`
-margin-top: 40px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -447,44 +335,37 @@ export const AskUsText = styled.div`
 export const AskUsDesc = styled.div`
   font-weight: 500;
   font-size: 60px;
-  word-break: normal !important;
   p {
     margin: 0 !important;
-  }
-  @media screen and (max-width: 425px) {
-    font-size: 30px;
   }
 `;
 export const ContactDesc = styled.div`
   font-weight: 500;
   font-size: 60px;
-
-  @media screen and (max-width: 425px) {
-    font-size: 30px;
-  }
 `;
 export const ContactArea = styled.div`
   background: url("/assets/products/bg2.png") no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   row-gap: 40px;
   padding: 150px 0;
-  
+  @media screen and (max-width: 425px) {
+    * {
+      width: 80% !important;
+    }
+  }
   * {
     width: 50%;
     padding-left: 20px;
     font-size: 25px;
     border: none;
-    
-    @media screen and (max-width: 768px) {
-      width: 70%;
-    }
-    @media screen and (max-width: 425px) {
-      width: 90%;
-    }
+  }
+  input {
+    border: none !important;
+    outline: none !important;
   }
   button {
     background-color: #4c4c4c;
@@ -495,13 +376,14 @@ export const ContactArea = styled.div`
     background-color: #747474;
     cursor: pointer;
   }
-  input, button {
+  input,
+  button {
     height: 40px;
   }
   textarea {
     padding-top: 10px;
+    border: none !important;
+    outline: none !important;
   }
 `;
-export const safadsfasdfasdf = styled.div`
-
-`;
+export const safadsfasdfasdf = styled.div``;
