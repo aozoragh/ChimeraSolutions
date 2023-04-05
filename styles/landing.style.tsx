@@ -20,7 +20,7 @@ export const FirstSection = styled.div`
     height: 1100px;
   }
   @media screen and (max-width: 425px) {
-    height: 1000px;
+    height: 750px;
   }
 `;
 
@@ -59,20 +59,10 @@ export const ContactDescription = styled.div`
 `;
 export const Vector = styled.div`
   width: 100%;
-  height: 474px;
+  height: 30vw;
   /* border: 1px solid red; */
   background: url(${vector1.src}) no-repeat;
-  background-size: 100% 100%;
-
-  @media screen and (max-width: 1024px) {
-    height: 400px;
-  }
-  @media screen and (max-width: 768px) {
-    height: 300px;
-  }
-  @media screen and (max-width: 425px) {
-    height: 150px;
-  }
+  background-size: contain;
 `;
 export const ContactButton = styled.div`
   width: 322px;
@@ -88,10 +78,13 @@ export const ContactButton = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 425px) {
-    width: 100%;
+    width: 70%;
+    height: 80px;
+    margin: auto;
+    font-size: 35px;
   }
   @media screen and (max-width: 320px) {
-    font-size: 33px;
+    font-size: 30px;
   }
 `;
 export const SecondSection = styled.div`
@@ -109,7 +102,7 @@ export const SecondSection = styled.div`
   }
 `;
 export const SecondTittle = styled.div`
-  font-weight: 500;
+  font-weight: 600;
   font-size: 300px;
   line-height: 358px;
   color: #ffffff;
@@ -254,6 +247,9 @@ export const OurTestimonials = styled.div`
     img {
       width: 50px;
       height: 50px;
+      @media screen and (max-width: 425px) {
+        margin-right: 10px;
+      }
     }
     & > div {
       width: 80%;
@@ -270,7 +266,7 @@ export const OurTestimonials = styled.div`
       }
     }
     @media screen and (max-width: 768px) {
-      width: 90%;
+      width: 100%;
       margin-top: 10px;
     }
     @media screen and (max-width: 425px) {
@@ -360,10 +356,10 @@ export const FourthSection = styled.div`
 `;
 export const ProductsText = styled.div`
   font-style: normal;
-  font-weight: 500;
-  font-size: 400px;
+  font-weight: 600;
+  font-size: 20vw;
   line-height: 477px;
-  @media screen and (max-width: 1440px) {
+  /* @media screen and (max-width: 1440px) {
     font-size: 300px;
   }
   @media screen and (max-width: 1024px) {
@@ -377,7 +373,7 @@ export const ProductsText = styled.div`
   }
   @media screen and (max-width: 320px) {
     font-size: 65px;
-  }
+  } */
 `;
 
 export const FifthSection = styled.div`

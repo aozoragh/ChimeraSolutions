@@ -80,27 +80,21 @@ export default function Project() {
         <Container>
           <Line></Line>
           <ThirdSectionContent>
-            <ConetentText
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                rowGap: "40px",
-              }}
-            >
-              <div>
+            <ConetentText>
+              <p>
                 Partnership in neural network model enhancement with OMNet++. We
                 could reach over 10x speed improvements. We also presented our
                 result on their conference at OMNeT++ 2022 Summit.
-              </div>
-              <div>
+              </p>
+              <p>
                 Summit website:  https://summit.omnetpp.org/2022/index.html
-              </div>
-              <div>
+              </p>
+              <p>
                 Presentation slides:
                 https://docs.google.com/presentation/d/16strtgl22lZ4h5NvLQ1CsVDVP6sf2GAEW_FWtqnhfpM/edit
-              </div>
+              </p>
             </ConetentText>
-            <img src="assets/projects/pink.png" alt="" />
+            <div><img src="assets/projects/pink.png" alt="" /></div>
           </ThirdSectionContent>
         </Container>
       </SecondSection>
