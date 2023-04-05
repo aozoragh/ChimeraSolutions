@@ -19,7 +19,7 @@ export const TeamHeadView = styled.div`
 `;
 export const TeamHeadTxt = styled.span`
   font-size: 280px;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 0em;
   text-align: center;
   color: #000;
@@ -320,7 +320,7 @@ export const FifthSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25vh 0;
+  /* padding: 25vh 0; */
 `;
 export const AskUsArea = styled.div`
   display: flex;
@@ -338,10 +338,16 @@ export const AskUsDesc = styled.div`
   p {
     margin: 0 !important;
   }
+  @media screen and (max-width: 640px) {
+    font-size: 9vw;
+  }
 `;
 export const ContactDesc = styled.div`
   font-weight: 500;
   font-size: 60px;
+  @media screen and (max-width: 740px) {
+    font-size: 8vw;
+  }
 `;
 export const ContactArea = styled.div`
   background: url("/assets/products/bg2.png") no-repeat;
@@ -352,7 +358,7 @@ export const ContactArea = styled.div`
   align-items: center;
   row-gap: 40px;
   padding: 150px 0;
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 1024px) {
     * {
       width: 80% !important;
     }

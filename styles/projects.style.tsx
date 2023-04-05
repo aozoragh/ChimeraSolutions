@@ -22,11 +22,11 @@ export const Container = styled.div`
   margin: 100px 0;
 `;
 export const VisionText = styled.div`
-  font-size: 250px;
+  font-size: 15vw;
   font-weight: bold;
   color: transparent;
   -webkit-text-stroke: 1px #fff;
-  @media screen and (max-width: 1024px) {
+  /* @media screen and (max-width: 1024px) {
     font-size: 180px;
   }
   @media screen and (max-width: 768px) {
@@ -40,15 +40,15 @@ export const VisionText = styled.div`
   }
   @media screen and (max-width: 320px) {
     font-size: 60px;
-  }
+  } */
 `;
 export const VisionText1 = styled.div`
-  font-size: 240px;
+  font-size: 15vw;
   font-weight: bold;
   color: transparent;
   -webkit-text-stroke: 1px #fff;
   letter-spacing: -3px;
-  @media screen and (max-width: 1440px) {
+  /* @media screen and (max-width: 1440px) {
     font-size: 200px;
   }
   @media screen and (max-width: 1024px) {
@@ -65,7 +65,7 @@ export const VisionText1 = styled.div`
   }
   @media screen and (max-width: 320px) {
     font-size: 55px;
-  }
+  } */
 `;
 export const SecondSection = styled.div`
   width: 100vw;
@@ -85,6 +85,12 @@ export const ConetentText = styled.div`
   font-weight: 500;
   font-size: 40px;
   line-height: 42px;
+  overflow-wrap: anywhere;
+
+  div {
+    width: 100%;
+  }
+
   @media screen and (max-width: 425px) {
     font-size: 35px;
   }
@@ -123,7 +129,7 @@ export const ThirdSectionContent = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
     div {
       font-size: 25px;
@@ -136,6 +142,7 @@ export const ThirdSectionContent = styled.div`
       line-height: 30px;
     }
   }
+
 `;
 export const Vision3Section = styled.div`
   background: url("/assets/projects/image 60.png") no-repeat;
