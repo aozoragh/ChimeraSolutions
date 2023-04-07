@@ -46,6 +46,20 @@ import {
 } from "../../styles/product.style";
 import Image from "next/image";
 import ContactSection from "../../components/ContactSection";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+
+import slide1 from "../../public/assets/products/slide/1.png";
+import slide2 from "../../public/assets/products/slide/2.png";
+import slide3 from "../../public/assets/products/slide/3.png";
+
+import video1 from "../../public/assets/video/video1.mp4";
+import video2 from "../../public/assets/video/video2.mp4";
+
 export default function Team() {
   return (
     <TeamContainer>
@@ -113,7 +127,18 @@ export default function Team() {
             </SubPassView>
           </PassViewContainer>
         </PassViewNext>
-        <SliderArea></SliderArea>
+        <SliderArea>
+          <Swiper
+              spaceBetween={0}
+              slidesPerView={2}
+              onSlideChange={() => console.log('slide change')}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              <SwiperSlide><div className="latest-project-slide"><img src={slide1.src} alt="slide" /></div></SwiperSlide>
+              <SwiperSlide><div className="latest-project-slide"><img src={slide2.src} alt="slide" /></div></SwiperSlide>
+              <SwiperSlide><div className="latest-project-slide"><img src={slide3.src} alt="slide" /></div></SwiperSlide>
+            </Swiper>
+        </SliderArea>
         <PPETextArea>
           To minimize on-site injuries and accidents we developed a real-time
           portable solution for PPE surveillance.

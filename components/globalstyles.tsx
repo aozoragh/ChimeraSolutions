@@ -22,6 +22,23 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Neue Haas Grotesk Display Pro', sans-serif !important;
   }
 
+  .swiper-wrapper {
+    width: 59vw !important;
+  }
+
+  .swiper {
+    width: 90vw;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .latest-project-slide {
+    width: 59vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
 `;
 
 export default GlobalStyle;
