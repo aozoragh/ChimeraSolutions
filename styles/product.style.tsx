@@ -95,7 +95,8 @@ export const PassTxt = styled.div`
   font-size: 280px;
   font-weight: bold;
 
-  color: #fff;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
   @media screen and (max-width: 1280px) {
     font-size: 180px;
   }
@@ -163,8 +164,7 @@ export const EmailAddress = styled.div`
 export const SliderArea = styled.div`
   max-width: 90%;
   margin: auto;
-  height: 400px;
-  background-color: green;
+  height: 700px;
 `;
 
 export const PPETextArea = styled.div`
@@ -234,11 +234,13 @@ export const VideoWrapper = styled.div`
   h1 {
     font-family: "Neue Haas Grotesk Display Pro";
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 150px;
     line-height: 179px;
     margin: 0;
     margin-bottom: 20px;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
   }
 `;
 

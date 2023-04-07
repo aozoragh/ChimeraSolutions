@@ -30,6 +30,10 @@ import media1 from "../public/assets/landing/media1.png";
 import media2 from "../public/assets/landing/media2.png";
 import media3 from "../public/assets/landing/media3.png";
 
+import slide1 from "../public/assets/landing/slide/1.png";
+import slide2 from "../public/assets/landing/slide/2.png";
+import slide3 from "../public/assets/landing/slide/3.png";
+
 import {
   FirstSection,
   ContactDescription,
@@ -273,18 +277,19 @@ export default function Home() {
           <Mask>
             <LandingContainer>
               <ThirdTitle>Our Latest Projects</ThirdTitle>
-              {/* <Swiper
-              spaceBetween={50}
-              slidesPerView={3}
+              <Swiper
+              spaceBetween={750}
+              slidesPerView={2}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
             >
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              ...
-            </Swiper> */}
-              <ViewAllButton>View All</ViewAllButton>
+              <SwiperSlide><div className="latest-project-slide"><img src={slide1.src} alt="slide" /></div></SwiperSlide>
+              <SwiperSlide><div className="latest-project-slide"><img src={slide2.src} alt="slide" /></div></SwiperSlide>
+              <SwiperSlide><div className="latest-project-slide"><img src={slide3.src} alt="slide" /></div></SwiperSlide>
+            </Swiper>
+              <Link href="/projects" passHref>
+                <ViewAllButton>View All</ViewAllButton>
+              </Link>           
             </LandingContainer>
           </Mask>
         </ThirdSection>
@@ -293,7 +298,9 @@ export default function Home() {
           <LandingContainer>
             <div></div>
             <ProductsText>Products</ProductsText>
-            <ViewAllButton>View All</ViewAllButton>
+            <Link href="/products" passHref>
+              <ViewAllButton>View All</ViewAllButton>
+            </Link>
           </LandingContainer>
         </FourthSection>
 
