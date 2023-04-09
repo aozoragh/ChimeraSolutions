@@ -216,6 +216,7 @@ export const PlayButton = styled.div`
 
 export const Video = styled.div`
   position: absolute;
+  z-index: 9999;
   width: 100%;
   height: calc(100% - 300px);
   top: 0;
@@ -288,12 +289,12 @@ export const ThirdBackgroundArea = styled.div`
   }
 `;
 export const OurPartnersText = styled.div`
-  font-weight: 500;
+  font-weight: 800;
   font-size: 150px;
 `;
 export const WhoText = styled.div`
   border-top: 1px solid #fff;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 80px;
   width: 45%;
   p {
@@ -322,7 +323,7 @@ export const FifthSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 25vh 0; */
+  padding: 25vh 0;
 `;
 export const AskUsArea = styled.div`
   display: flex;
@@ -335,7 +336,7 @@ export const AskUsText = styled.div`
   font-size: 20px;
 `;
 export const AskUsDesc = styled.div`
-  font-weight: 500;
+  font-weight: 700;
   font-size: 60px;
   p {
     margin: 0 !important;
@@ -345,7 +346,7 @@ export const AskUsDesc = styled.div`
   }
 `;
 export const ContactDesc = styled.div`
-  font-weight: 500;
+  font-weight: 700;
   font-size: 60px;
   @media screen and (max-width: 740px) {
     font-size: 8vw;

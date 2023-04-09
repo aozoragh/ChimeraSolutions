@@ -116,7 +116,7 @@ export const Vision2Section = styled.div`
   background: url("/assets/projects/image 59.png") no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 130vh;
+  height: 140vh;
   display: flex;
   justify-content: center;
   align-items: center;
