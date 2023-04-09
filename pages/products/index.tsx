@@ -53,12 +53,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
+// Import React Player
+import ReactPlayer from 'react-player/lazy'
+
 import slide1 from "../../public/assets/products/slide/1.png";
 import slide2 from "../../public/assets/products/slide/2.png";
 import slide3 from "../../public/assets/products/slide/3.png";
 
-import video1 from "../../public/assets/video/video1.mp4";
-import video2 from "../../public/assets/video/video2.mp4";
+// import video1 from "../../public/assets/video/video1.mp4";
+// import video2 from "../../public/assets/video/video2.mp4";
 
 export default function Team() {
   return (
@@ -161,11 +164,15 @@ export default function Team() {
             </PlayButton>
           </VideoWrapper>
           <Video>
-            <video
-              src=""
+            <video poster="/assets/products/background.png" controls width={"100%"} height={"100%"}>
+              <source src="assets/video/video1.mp4" type="video/mp4"></source>
+            </video>
+            {/* <video
               poster="/assets/products/background.png"
               className="video"
-            />
+            >
+              <source src="https://www.youtube.com/watch?v=Wj7GND5UQmc" />
+            </video> */}
           </Video>
         </VideoArea>
       </PassContext>
@@ -196,11 +203,16 @@ export default function Team() {
               </PlayButton>
             </VideoWrapper>
             <Video>
-              <video
-                src=""
+              {/* <video
                 poster="/assets/products/poster2.png"
                 className="video"
-              />
+              > */}
+                {/* <ReactPlayer url="https://www.youtube.com/watch?v=wWgIAphfn2U" width={"100%"} height={"100%"} controls /> */}
+                <video poster="/assets/products/poster2.png" controls width={"100%"} height={"100%"}>
+                 <source src="assets/video/video2.mp4" type="video/mp4"></source>
+                </video>
+              {/* <ReactPlayer url="https://www.youtube.com/watch?v=f-XFjXwMXeg" /> */}
+              {/* </video> */}
             </Video>
           </VideoArea>
         </Container>
