@@ -287,12 +287,6 @@ export const ThirdSection = styled.div`
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  .swiper-slide {
-    width: 200px !important;
-  }
-  .swiper {
-    /* border: 1px solid red; */
-  }
 
   @media screen and (max-width: 425px) {
     height: 70vh;
@@ -359,21 +353,6 @@ export const ProductsText = styled.div`
   font-weight: 600;
   font-size: 20vw;
   line-height: 477px;
-  /* @media screen and (max-width: 1440px) {
-    font-size: 300px;
-  }
-  @media screen and (max-width: 1024px) {
-    font-size: 200px;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 150px;
-  }
-  @media screen and (max-width: 425px) {
-    font-size: 80px;
-  }
-  @media screen and (max-width: 320px) {
-    font-size: 65px;
-  } */
 `;
 
 export const FifthSection = styled.div`

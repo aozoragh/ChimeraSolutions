@@ -86,9 +86,9 @@ export default function Team() {
             <SkillTxt>System</SkillTxt>
             <EmailsContainer>
               <EmailName>SOFTWARE</EmailName>
-              <EmailAddress>info@chimerasolutions.ai</EmailAddress>
+              <EmailAddress className="overflow-wrap-anywhere">info@chimerasolutions.ai</EmailAddress>
               <EmailName>HARDWARE ABD MAINTENENCE</EmailName>
-              <EmailAddress>info@mobilrouter.com</EmailAddress>
+              <EmailAddress className="overflow-wrap-anywhere">info@mobilrouter.com</EmailAddress>
             </EmailsContainer>
           </PassView>
         </PassContainer>
@@ -102,7 +102,7 @@ export default function Team() {
               <SkillTxt>System</SkillTxt>
             </SubPassView>
             <SubPassView>
-              <PassSmallTxt>
+              <PassSmallTxt className="overflow-wrap-anywhere">
                 A lightweight computer vision surveillance system designed for
                 monitoring construction sites. It can detect workers with
                 insufficient personal protective equipment (PPE), store relevant
@@ -134,6 +134,24 @@ export default function Team() {
           <Swiper
               spaceBetween={0}
               slidesPerView={2}
+              breakpoints={{
+              // when window width is >= 640px
+              320: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 640px
+              425: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 2,
+              },
+            }}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
             >
@@ -158,10 +176,10 @@ export default function Team() {
         <VideoArea>
           <img src={"/assets/products/tv.png"} alt="" draggable={false} />
           <VideoWrapper>
-            <h1>PASS</h1>
+            {/* <h1>PASS</h1>
             <PlayButton>
               <img src="/assets/products/play.png" alt="" />
-            </PlayButton>
+            </PlayButton> */}
           </VideoWrapper>
           <Video>
             <video poster="/assets/products/background.png" controls width={"100%"} height={"100%"}>
@@ -197,10 +215,10 @@ export default function Team() {
           <VideoArea>
             <img src={"/assets/products/tv.png"} alt="" draggable={false} />
             <VideoWrapper>
-              <h1>PASS</h1>
+              {/* <h1>PASS</h1>
               <PlayButton>
                 <img src="/assets/products/play.png" alt="" />
-              </PlayButton>
+              </PlayButton> */}
             </VideoWrapper>
             <Video>
               {/* <video
