@@ -43,7 +43,7 @@ export const AboutContentTxt = styled.span`
   color: #ffffff;
   @media screen and (max-width: 1024px) {
     font-size: 60px;
-    line-height: 100px;
+    line-height: 70px;
   }
   @media screen and (max-width: 425px) {
     font-size: 36px;
@@ -51,5 +51,6 @@ export const AboutContentTxt = styled.span`
   }
   @media screen and (max-width: 375px) {
     font-size: 24px;
+    line-height: 38px;
   }
 `;

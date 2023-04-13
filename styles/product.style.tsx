@@ -129,6 +129,9 @@ export const PassViewNext = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 export const SubPassView = styled.div`
   display: flex;
@@ -142,6 +145,10 @@ export const PassSmallTxt = styled.span`
   color: #fff;
   opacity: 0.75;
   margin-top: 30px;
+  @media screen and (max-width: 425px) {
+    font-size: 25px;
+    line-height: 30px;
+  }
 `;
 
 export const EmailsContainer = styled.div`
@@ -164,7 +171,7 @@ export const EmailAddress = styled.div`
 export const SliderArea = styled.div`
   max-width: 90%;
   margin: auto;
-  height: 700px;
+  /* height: 700px; */
 `;
 
 export const PPETextArea = styled.div`
@@ -174,6 +181,21 @@ export const PPETextArea = styled.div`
   font-size: 80px;
   line-height: 76px;
   padding: 100px 10px;
+  @media screen and (max-width: 768px) {
+    font-weight: 500;
+    font-size: 53px;
+    line-height: 57px;
+    padding: 50px 10px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 37px;
+    line-height: 45px;
+  }
+  @media screen and (max-width: 320px)
+  {
+    font-size: 32px;
+    line-height: 35px;
+  }
 `;
 export const LineBottom = styled.div`
   border-bottom: 1px solid #fff;
@@ -189,11 +211,20 @@ export const PTZTextArea = styled.div`
   font-size: 45px;
   line-height: 46px;
   padding: 20px 0 0 0;
+  @media screen and (max-width: 768px) {
+    font-size: 37px;
+    line-height: 40px;
+  }
+  @media screen and (max-width: 320px)
+  {
+    font-size: 25px;
+    line-height: 30px;
+  }  
 `;
 export const VideoArea = styled.div`
   width: 80%;
-  margin: 300px auto auto auto;
-  padding-bottom: 300px;
+  margin: 16vw auto auto auto;
+  padding-bottom: 16vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,7 +249,7 @@ export const Video = styled.div`
   position: absolute;
   z-index: 9999;
   width: 100%;
-  height: calc(100% - 300px);
+  height: calc(100% - 16vw);
   top: 0;
   left: 0;
   padding: 2.8% 12% 6.5%;
@@ -253,13 +284,14 @@ export const SecondBackgroundArea = styled.div`
 `;
 
 export const ThirdSection = styled.div`
+  margin-top: -4px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(146.33deg, #839caf -8.18%, #193245 97.91%);
   background-blend-mode: darken;
-  padding: 25vh 0;
+  padding: 20vw 0;
 `;
 export const Container = styled.div`
   width: 90%;
@@ -268,10 +300,27 @@ export const FirstText = styled.div`
   font-weight: 500;
   font-size: 80px;
   line-height: 76px;
+  @media screen and (max-width: 768px) {
+    font-size: 63px;
+    line-height: 62px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 48px;
+    line-height: 55px;
+  }
 `;
 export const SecondText = styled.div`
   font-weight: 500;
   font-size: 45px;
+  @media screen and (max-width: 425px) {
+    font-size: 36px;
+  }  
+  @media screen and (max-width: 375px) {
+    font-size: 31px;
+  }  
+  @media screen and (max-width: 320px) {
+    font-size: 27px;
+  }  
 `;
 export const LineBottomNew = styled.div`
   border-bottom: 1px solid #fff;
@@ -291,6 +340,9 @@ export const ThirdBackgroundArea = styled.div`
 export const OurPartnersText = styled.div`
   font-weight: 800;
   font-size: 150px;
+  @media screen and (max-width: 768px) {
+    font-size: 19vw;
+  } 
 `;
 export const WhoText = styled.div`
   border-top: 1px solid #fff;
@@ -300,6 +352,9 @@ export const WhoText = styled.div`
   p {
     margin: 0 !important;
   }
+  @media screen and (max-width: 425px) {
+    font-size: 18.8vw;
+  } 
 `;
 export const SubContainer = styled.div`
   margin-top: 40px;
@@ -323,13 +378,16 @@ export const FifthSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25vh 0;
+  padding: 20vw 0;
 `;
 export const AskUsArea = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 10px;
   margin-bottom: 100px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 13vw;
+  }
 `;
 export const AskUsText = styled.div`
   font-weight: 500;
@@ -348,8 +406,8 @@ export const AskUsDesc = styled.div`
 export const ContactDesc = styled.div`
   font-weight: 700;
   font-size: 60px;
-  @media screen and (max-width: 740px) {
-    font-size: 8vw;
+  @media screen and (max-width: 800px) {
+    font-size: 7.5vw;
   }
 `;
 export const ContactArea = styled.div`

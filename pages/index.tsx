@@ -63,6 +63,7 @@ import {
   Mark,
   ContactArea,
 } from "../styles/landing.style";
+import { SliderArea } from "../styles/product.style";
 
 export default function Home() {
   var settings = {
@@ -275,11 +276,30 @@ export default function Home() {
 
         <ThirdSection>
           <Mask>
-            <LandingContainer>
+            <LandingContainer className="landing-slider-container">
               <ThirdTitle>Our Latest Projects</ThirdTitle>
-              <Swiper
-              spaceBetween={750}
+              <SliderArea>
+          <Swiper
+              spaceBetween={0}
               slidesPerView={2}
+              breakpoints={{
+              // when window width is >= 640px
+              320: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 640px
+              425: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 1,
+              },
+              // when window width is >= 768px
+              768: {
+                slidesPerView: 2,
+              },
+            }}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
             >
@@ -287,6 +307,7 @@ export default function Home() {
               <SwiperSlide><div className="latest-project-slide"><img src={slide2.src} alt="slide" /></div></SwiperSlide>
               <SwiperSlide><div className="latest-project-slide"><img src={slide3.src} alt="slide" /></div></SwiperSlide>
             </Swiper>
+        </SliderArea>
               <Link href="/projects" passHref>
                 <ViewAllButton>View All</ViewAllButton>
               </Link>           

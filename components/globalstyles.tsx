@@ -33,10 +33,25 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .latest-project-slide {
-    width: 59vw;
+    width: 44vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media screen and (max-width: 767px) {
+      width: 90vw;
+    }
+  }
+
+  .overflow-wrap-anywhere {
+    overflow-wrap: anywhere;
+  }
+  .landing-slider-container {
+    width: 100% !important;
   }
 
 `;
